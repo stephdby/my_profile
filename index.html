@@ -4,10 +4,12 @@
 	<title>Stephane's profile</title>
 	<meta charset="utf-8">
 	<meta name="description" content="welcome in my world">
-	<meta property="og:image" content="images/stephdby.jpeg">
+	<meta name="og:image" content="images/stephdby.jpeg">
 	<link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/7637642b68.js"></script>
 	<link rel="stylesheet" href="style.css">
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
 	</head>
 	<body>
 <div class="container">
@@ -40,6 +42,15 @@
 	<li>Diving <i class="fas fa-swimmer img-circle"></i></li>
 	<li>travel <i class="fas fa-luggage-cart img-circle"></i></li>
 	</ol>
+	<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic3RlcGhkYnkiLCJhIjoiY2p4NHFhY2V4MGI4aTQ4cnY4bmQ4OWI0ZyJ9.pPCAEZkOpnau__MDgCrdKA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+  });
+</script>
+
 </div>
 <div class="card-blue">
     <i class="fab fa-facebook img-size space"></i>
