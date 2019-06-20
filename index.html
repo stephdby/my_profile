@@ -1,3 +1,4 @@
+
 <!doctype HTML>
 <html>
 	<head>
@@ -21,8 +22,9 @@
 <div class="card-blue2">
 	I'm webanalyst at the Group La Poste and I analyze customer journey on www.laposte.fr (desktop & mobile)
 </div>
-    </p>
+<p></p>
 </div>
+
 <div class="card">
 	<a href="http://www.laposte.fr" target="_blank"><h2>Ecommerce Website La Poste</h2></a>
 	</p>
@@ -42,19 +44,55 @@
 	<li>Diving <i class="fas fa-swimmer img-circle"></i></li>
 	<li>travel <i class="fas fa-luggage-cart img-circle"></i></li>
 	</ol>
-
+</div>
 <div class="card-blue">
     <i class="fab fa-facebook img-size space"></i>
     <i class="fab fa-twitter-square img-size space"></i>
     <i class="fab fa-pinterest-square img-size space"></i>
 </div> 
 </div>
-<div id='map' style='width: 800px; height: 300px; text-align: center;'></div>
+<p></p>
+<div id='map' style='width: auto; height: 300px;'></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3RlcGhkYnkiLCJhIjoiY2p4NHFhY2V4MGI4aTQ4cnY4bmQ4OWI0ZyJ9.pPCAEZkOpnau__MDgCrdKA';
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11'
+style: 'mapbox://styles/mapbox/streets-v11',
+zoom: 10.87,
+center: [2.2108,48.8311]
+});
+
+map.on("load", function () {
+/* Image: An image is loaded and added to the map. */
+map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
+if (error) throw error;
+map.addImage("custom-marker", image);
+/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+map.addLayer({
+id: "markers",
+type: "symbol",
+/* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+source: {
+type: "geojson",
+data: {
+type: 'FeatureCollection',
+features: [
+{
+type: 'Feature',
+properties: {},
+geometry: {
+type: "Point",
+coordinates: [2.2135, 48.857]
+}
+}
+]
+}
+},
+layout: {
+"icon-image": "custom-marker",
+}
+});
+});
 });
 </script>
 	</body>
