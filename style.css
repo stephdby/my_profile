@@ -1,0 +1,86 @@
+h1{
+	color: rgb(84, 32, 137);
+	font-size : 25px;
+	background-color: #FFFFFF
+}
+body{
+	text-align: center;
+	font-family: 'Saira Semi Condensed', sans-serif;
+	background-color: #00f1ff38;
+	align-items: center;
+	font-weight: 300;
+}
+a{
+	color: grey;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+a:hover {
+  color: orange;
+  text-decoration: none;
+}
+.card{
+    background: white;
+    width: auto;
+    margin: 35px auto;
+    padding: 10px;
+    border-radius: 25PX;
+    box-shadow: 10px 7px rgb(100,100,100);
+}
+.img-circle{
+	border-radius:50%;
+}
+#img-color{
+	border:4px solid;
+	color:#00aaffdb;
+}
+.img-size{
+	font-size: 40px
+}
+.card-blue{
+	background:#00aaffdb;
+	text-align: center;
+    width: auto;
+    margin: auto;
+    border-radius: 0px;
+    border: 4px solid white;
+    box-shadow: none;
+}
+.card-blue2{
+	background:#00aaffdb;
+	color:white;
+	font-style:italic;
+	font-weight: 600;
+    width: auto;
+    margin: auto;
+    border-radius: 0px;
+    border: 4px solid white;
+    box-shadow: 5px 5px rgb(200,251,254);
+}
+.list{
+  text-align: center;
+  padding-inline-start: auto;
+  list-style-type: none;
+}
+.picto{
+  list-style-type:none;
+   text-align: center;
+  padding-inline-start: auto;
+}
+.space{
+	padding:5px 20px 5px 20px; 
+}
+.container{
+	width: 600px;
+	margin:0px auto;
+}
+@media (max-width:960px){
+	.container{width: 700px;}
+}
+@media (max-width:720px){
+	.container{width: 500px;}
+}
+@media (max-width:540px){
+	.container{width: 300px;}
+	.img-circle{width: 100px;}
+}
